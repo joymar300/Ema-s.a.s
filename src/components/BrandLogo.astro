@@ -1,1 +1,6 @@
-<img src="../src/images/Logo.png" width="50px" class="mt-1 mb-1">
+---
+import Image from "astro/components/Image.astro";
+import Logo from '@/images/Logo.png';
+---
+
+<img src={Logo.src} width="50px" class="mt-1 mb-1">
