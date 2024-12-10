@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build && node process-html.mjs",
+    "prebuild": "chmod -R 755 node_modules/.bin",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
