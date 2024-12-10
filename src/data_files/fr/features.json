@@ -1,22 +1,12 @@
 [
   {
-    "heading": "Équipes dédiées",
-    "content": "Bénéficiez de nos équipes engagées qui veillent à ce que votre réussite soit personnelle. Comptez sur un accompagnement expert et des résultats exceptionnels tout au long de votre parcours de projet.",
-    "svg": "groups"
-  },
-  {
-    "heading": "Simplicité et accessibilité",
-    "content": "Trouvez des solutions faciles à utiliser et abordables avec la gamme d'outils et d'équipements de ScrewFast. Nos produits simplifient l'approvisionnement et permettent de respecter les budgets de projet.",
+    "heading": "Misión",
+    "content": "Proporcionar a nuestros clientes un servicio excelente, de primera calidad, apoyado en un nivel tecnológico a la altura de los mejores y ofreciendo soluciones eficientes e innovadoras para resolver sus problemas.",
     "svg": "verified"
   },
   {
-    "heading": "Documentation complète",
-    "content": "Intégrez facilement grâce aux guides exhaustifs et aux bibliothèques de ScrewFast. Réalisez une adoption de produit sans faille avec notre ensemble complet de documentation conçu pour votre succès.",
+    "heading": "Visión",
+    "content": "EMA S.A.S. será en el 2022 una empresa líder en el mercado bajo la cobertura perfecta, que integre los elementos necesarios para el correcto desarrollo de sus proyectos. Nos visionamos en el 2026 como una empresa de gran reconocimiento a nivel nacional e internacional en el área de la construcción, acreditada y certificada por los diferentes entes de control de calidad generando así, mayor compromiso y eficacia en la ejecución de nuestras obras.",
     "svg": "books"
-  },
-  {
-    "heading": "Conception centrée sur l'utilisateur",
-    "content": "Faites l'expérience de la différence avec la conception axée sur l'utilisateur de ScrewFast, où la fonctionnalité rencontre la praticité pour une expérience de travail améliorée.",
-    "svg": "frame"
   }
 ]

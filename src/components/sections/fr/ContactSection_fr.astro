@@ -9,12 +9,12 @@ import TextAreaInput from "@components/ui/forms/input/TextAreaInput.astro";
 import Icon from "@components/ui/icons/Icon.astro";
 
 // Define the variables that will be used in this component
-const title: string = "Contactez-nous";
+const title: string = "Contactanos";
 const subTitle: string =
-  "Vous avez des questions ou souhaitez discuter d'un projet ? Contactez-nous et laissons-nous élaborer la solution parfaite avec nos outils et services.";
-const formTitle: string = "Remplissez le formulaire ci-dessous";
+  "Queremos escuchar tus ideas, resolver tus dudas y acompañarte en cada paso de tu proyecto.";
+const formTitle: string = "Llene el formulario a continuación";
 const formSubTitle: string =
-  "Nous vous répondrons dans un délai de 1 à 2 jours ouvrables.";
+  "Llene la formula continua";
 ---
 
 <!-- Contact Us -->
@@ -45,12 +45,12 @@ const formSubTitle: string =
             <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <TextInput
                 id="hs-firstname-contacts"
-                label="Prénom"
+                label="Nombre"
                 name="hs-firstname-contacts"
               />
               <TextInput
                 id="hs-lastname-contacts"
-                label="Nom"
+                label="Apellido"
                 name="hs-firstname-contacts"
               />
             </div>
@@ -58,7 +58,7 @@ const formSubTitle: string =
             <PhoneInput id="hs-phone-number" />
             <TextAreaInput
               id="hs-about-contacts"
-              label="Détails"
+              label="Detalles"
               name="hs-about-contacts"
             />
           </div>
