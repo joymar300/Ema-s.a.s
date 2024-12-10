@@ -1,12 +1,12 @@
 ---
-title: "SF-FN F303"
-description: "Hex Bolts"
+title: "Remodelacion de Vivienda en Agua Marina Risort"
+description: "Remodelacion de Vivienda en Agua Marina Risort"
 main:
   id: 4
   content: |
     Introducing the SF-FN F303 Hex Bolts – the perfect choice for heavy-duty fastening applications. Crafted with precision and durability in mind, these hex bolts provide the strength and reliability you need for your toughest projects.
-  imgCard: "@/images/product-image-4.avif"
-  imgMain: "@/images/product-image-main-4.avif"
+  imgCard: "@/images/AGUA MARINA.jpg"
+  imgMain: "@/images/AGUA MARINA.jpg"
   imgAlt: "Mockup boxes of hex bolts"
 tabs:
   - id: "tabs-with-card-item-1"
