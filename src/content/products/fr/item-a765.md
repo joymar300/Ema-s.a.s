@@ -1,12 +1,12 @@
 ---
-title: "SF-AB A765"
-description: "Ensemble de Vis Assorties"
+title: "Casa Baute Urbanizacion Lomas de Caujaral"
+description: "Casa Baute Urbanizacion Lomas de Caujaral"
 main:
   id: 2
   content: |
     Découvrez l'ensemble de vis assorties SF-AB A765 – la solution ultime pour vos besoins de fixation. Ce set complet comprend une grande variété de vis soigneusement sélectionnées pour aborder divers projets avec facilité et précision.
-  imgCard: "@/images/product-image-2.avif"
-  imgMain: "@/images/product-image-main-2.avif"
+  imgCard: "@/images/fachada malla.jpg"
+  imgMain: "@/images/fachada malla.jpg"
   imgAlt: "Boîtes factices de l'ensemble de vis assorties"
 tabs:
   - id: "tabs-with-card-item-1"

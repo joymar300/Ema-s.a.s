@@ -1,12 +1,12 @@
 ---
-title: "SF-TB T845"
-description: "Vis à machine"
+title: "Bodegas Antonio Jimenez (zona frnaca internacional del Atlantico)"
+description: "Bodegas Antonio Jimenez (zona frnaca internacional del Atlantico)"
 main:
   id: 1
   content: |
     Découvrez le SF-TB T845 – votre solution de prédilection pour la fixation de précision dans les machines et équipements. Cet ensemble complet de vis à machine est méticuleusement conçu pour répondre aux exigences strictes des applications industrielles, garantissant une fixation sécurisée et fiable.
-  imgCard: "@/images/product-image-1.avif"
-  imgMain: "@/images/product-image-main-1.avif"
+  imgCard: "@/images/bodega.jpg"
+  imgMain: "@/images/bodega.jpg"
   imgAlt: "Maquettes de boîtes de vis à machine"
 tabs:
   - id: "tabs-with-card-item-1"

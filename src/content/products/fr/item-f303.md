@@ -1,12 +1,12 @@
 ---
-title: "SF-FN F303"
-description: "Boulons hexagonaux"
+title: "Remodelacion de Vivienda en Agua Marina Risort"
+description: "Remodelacion de Vivienda en Agua Marina Risort"
 main:
   id: 4
   content: |
     Découvrez les boulons hexagonaux SF-FN F303 – le choix parfait pour les applications de fixation lourdes. Conçus avec précision et durabilité, ces boulons hexagonaux offrent la force et la fiabilité dont vous avez besoin pour vos projets les plus exigeants.
-  imgCard: "@/images/product-image-4.avif"
-  imgMain: "@/images/product-image-main-4.avif"
+  imgCard: "@/images/AGUA MARINA.jpg"
+  imgMain: "@/images/AGUA MARINA.jpg"
   imgAlt: "Maquettes de boîtes de boulons hexagonaux"
 tabs:
   - id: "tabs-with-card-item-1"
