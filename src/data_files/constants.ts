@@ -1,7 +1,7 @@
 import ogImageSrc from "@images/social.png";
 
 export const SITE = {
-  title: "ScrewFast",
+  title: "EMA",
   tagline: "Top-quality Hardware Tools",
   description: "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs. Start exploring and contact our sales team for superior quality and reliability.",
   description_short: "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs.",

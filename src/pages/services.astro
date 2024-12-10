@@ -5,6 +5,7 @@ import MainSection from "@components/ui/blocks/MainSection.astro";
 import LeftSection from "@components/ui/blocks/LeftSection.astro";
 import RightSection from "@components/ui/blocks/RightSection.astro";
 import FeaturesStats from "@components/sections/features/FeaturesStats.astro";
+import { getRelativeLocaleUrl } from 'astro:i18n';
 
 // Import necessary images
 import blueprints from "@images/blueprints-image.avif";
@@ -15,7 +16,6 @@ import aerialView from "@images/aerial-view.avif";
 import usingTools from "@images/using-tools.avif";
 import progressBuilding from "@images/progress-building.avif";
 import underConstruction from "@images/under-construction.avif";
-import { SITE } from "@data/constants";
 
 interface Article {
   isRightSection: boolean;
@@ -36,90 +36,69 @@ interface Article {
 const articles: Article[] = [
   {
     isRightSection: true,
-    title: "Delivering Expert Guidance",
+    title: "Consultoría en arquitectura y diseño",
     subTitle:
-      "Embarking on a construction project can be overwhelming. With our professional consultation services, we guide you through every stage, ensuring you make informed decisions. Whether you are a DIY enthusiast or a skilled contractor, our experts are on hand to offer tailored advice on product selection, project scope, and compliance with local regulations.",
+      "Es necesario superar esa aproximación que reduce la Arquitectura a mero producto. Frente a una perspectiva de producto etiquetado para la posteridad, una mayor sensibilidad hacia el proceso, un enfoque intransitivo al que se incorpora la propia praxis humana en el devenir del proceso creativo. EMA S.A.S. trabaja sus servicios de consultoría, diseños, coordinación e integración siguiendo los procesos de su metodología de proyectos BIM (Building Information Modeling) o Modelos de información de la construcción. Esta metodología es aplicable a cualquier tipo de proyecto de la industria de la construcción (puentes, carreteras, edificaciones, e infraestructura en general) y se utiliza para todo el ciclo de vida de un proyecto de construcción, desde la conceptualización, diseños, construcción, administración, mantenimiento e incluso hasta su demolición.información de la construcción. Esta metodología es aplicable a cualquier tipo de proyecto de la industria de la construcción (puentes, carreteras, edificaciones, e infraestructura en general) y se utiliza para todo el ciclo de vida de un proyecto de construcción, desde la conceptualización, diseños, construcción, administración, mantenimiento e incluso hasta su demolición.",
     single: false,
     imgOne: blueprints,
-    imgOneAlt: "Blueprints and digital tablet with construction plans.",
+    imgOneAlt: "Plans et tablette numérique avec des plans de construction.",
     imgTwo: personWorking,
-    imgTwoAlt: "Person working in the office",
+    imgTwoAlt: "Personne travaillant au bureau",
   },
   {
     isRightSection: false,
-    title: "Transforming Designs into Reality",
+    title: "Gestión Integrada de proyectos de obra civil o mobiliaria",
     subTitle:
-      "Our skilled craftsmen bring precision and excellence to every construction project. From minor installations to substantial structural work, ScrewFast offers reliable construction services to turn your plans into tangible outcomes. We ensure the highest standards of safety and workmanship, utilizing top-quality tools and materials from our extensive inventory.",
+      "La creciente demanda de este tipo de servicios propició la creación de un área que concentra todas las especialidades, orientando constantemente el ciclo de vida de un proyecto hacia los objetivos definidos por el cliente, entre los que destacan el coste, el plazo y la calidad.",
     img: beforeAfter,
-    imgAlt: "Construction site before and after",
-    btnExists: true,
-    btnTitle: "Learn More",
-    btnURL: "#",
+    imgAlt: "Chantier de construction avant et après",
   },
   {
     isRightSection: true,
-    title: "Navigating Projects with Professional Oversight",
+    title: "Consultoría, ejecución y mantenimiento de obras civiles",
     subTitle:
-      "Effective project management is at the heart of any successful build. ScrewFast provides thorough planning and robust management services that keep your project on time and within budget. Let us handle the complexities of workflow coordination, resource allocation, and stakeholder communication while you focus on your vision.",
+      "Consultoría técnica en todos los ámbitos que comprende la definición y construcción de una obra en cualquiera de sus fases, agrupados en torno a las disciplinas troncales de la edificación: sistemas constructivos, sistemas portantes, sistemas energéticos.",
     single: false,
     imgOne: constructionWorkers,
-    imgOneAlt: "Construction workers orchestrating a project",
+    imgOneAlt: "Ouvriers du bâtiment orchestrant un projet",
     imgTwo: aerialView,
-    imgTwoAlt: "Aerial view of managed construction",
+    imgTwoAlt: "Vue aérienne d'une construction gérée",
   },
   {
     isRightSection: false,
-    title: "Ensuring Long-lasting Performance",
+    title: "Servicio técnico",
     subTitle:
-      "Our commitment to your project doesn't end at completion. ScrewFast offers ongoing maintenance and support services to ensure your construction's longevity and performance. From regular check-ups to emergency assistance, our responsive team is there to provide seamless support.",
+      "Obtén ayuda por teléfono, chat o correo electrónico, o programa una reparación de equipos tecnológicos afines con el confort en inmuebles y obras civiles; sean estos equipos de climatización, energía eléctrica y sistemas hidráulicos.",
     img: usingTools,
     imgAlt:
-      "Man in orange and black vest wearing white helmet holding yellow and black power tool",
-  },
-  {
-    isRightSection: true,
-    title: "Crafting Bespoke Strategies for Unique Challenges",
-    subTitle:
-      "For our larger enterprise clients, ScrewFast offers custom solutions designed to meet specific industry challenges. By understanding your unique needs, we engineer tailored strategies aimed at optimizing your operations, enhancing efficiency, and driving your business forward.",
-    single: false,
-    imgOne: progressBuilding,
-    imgOneAlt: "In progress building structure",
-    imgTwo: underConstruction,
-    imgTwoAlt: "Brown and gray building under construction",
-    btnExists: true,
-    btnTitle: "Read more",
-    btnURL: "#",
+      "Homme en gilet orange et noir portant un casque blanc tenant un outil électrique jaune et noir",
   },
 ];
-
-const pageTitle: string = `Services | ${SITE.title}`;
 ---
 
 <MainLayout
-  title={pageTitle}
+  title="Services | ScrewFast"
+  lang="fr"
   structuredData={{
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://screwfast.uk/services",
-    "url": "https://screwfast.uk/services",
-    "name": "Expert Consultation Services | ScrewFast",
-    "description": "Uniting expertise with your vision, ScrewFast provides exceptional service and comprehensive solutions in the hardware and construction industry, from consultation to project completion.",
-    "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://screwfast.uk",
-        "name": "ScrewFast",
-        "description": "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs."
+    "@id": "https://screwfast.uk/fr/services",
+    url: "https://screwfast.uk/fr/services",
+    name: "Services de Consultation d'Experts | ScrewFast",
+    description:
+      "Unissant l'expertise à votre vision, ScrewFast fournit un service exceptionnel et des solutions complètes dans le secteur du matériel et de la construction, de la consultation à l'achèvement du projet.",
+    isPartOf: {
+      "@type": "WebSite",
+      url: "https://screwfast.uk/fr",
+      name: "ScrewFast",
+      description:
+        "ScrewFast propose des outils matériels de premier ordre et des services de construction experts pour répondre à tous vos besoins de projet.",
     },
-    "inLanguage": "en-US"
+    inLanguage: "fr",
   }}
 >
   <!--MainSection is the introductory section of the page, it also contains a CTA button-->
-  <MainSection
-    title="Uniting Expertise with Your Vision"
-    subTitle="At ScrewFast, we take pride in providing comprehensive solutions and exceptional service in the hardware and construction industry. Our experienced team is dedicated to supporting your project from inception to completion with a range of specialized services."
-    btnExists={true}
-    btnTitle="Schedule a Consultation"
-    btnURL="#"
+  <div
   />
   <!-- RightSection and LeftSection contain details about various services along with pertinent imagery.
   They alternate for variety in design.
@@ -130,7 +109,7 @@ const pageTitle: string = `Services | ${SITE.title}`;
   If 'single' is true, it displays one image, otherwise it displays two.
   -->
   {
-    articles.map(article => {
+    articles.map((article) => {
       return article.isRightSection ? (
         <RightSection
           title={article.title}
@@ -158,24 +137,5 @@ const pageTitle: string = `Services | ${SITE.title}`;
     })
   }
   <!--FeaturesStats section showcases essential stats valuable to users-->
-  <FeaturesStats
-    title="By the Numbers"
-    subTitle="Our commitment to quality and reliability is evident in every project we undertake. At ScrewFast, we are dedicated to delivering industry-leading services that ensure your construction projects are built to last."
-    mainStatTitle="96%"
-    mainStatSubTitle="of our clients rate their experience with ScrewFast as exceptional"
-    stats={[
-      {
-        stat: "99.8%",
-        description: "project completion rate",
-      },
-      {
-        stat: "5,000+",
-        description: "successful installations",
-      },
-      {
-        stat: "85%",
-        description: "client growth year-over-year",
-      },
-    ]}
-  />
-</MainLayout>
+
+</div>

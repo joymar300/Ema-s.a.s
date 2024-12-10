@@ -9,7 +9,7 @@ import TextAreaInput from "@components/ui/forms/input/TextAreaInput.astro";
 import Icon from "@components/ui/icons/Icon.astro";
 
 // Define the variables that will be used in this component
-const title: string = "Contactanos";
+const title: string = "Contáctanos";
 const subTitle: string =
   "Queremos escuchar tus ideas, resolver tus dudas y acompañarte en cada paso de tu proyecto.";
 const formTitle: string = "Llene el formulario a continuación";
@@ -55,7 +55,7 @@ const formSubTitle: string =
               />
             </div>
             <EmailContactInput id="hs-email-contacts" />
-            <PhoneInput id="hs-phone-number" />
+            <PhoneInput id="hs-phone-number" label="Telefono" />
             <TextAreaInput
               id="hs-about-contacts"
               label="Detalles"
@@ -78,38 +78,18 @@ const formSubTitle: string =
       <!--ContactIconBlocks are used to display different methods of contacting, including visiting office, email, browsing knowledgebase, and FAQ.-->
       <div class="divide-y divide-neutral-300 dark:divide-neutral-700">
         <ContactIconBlock
-          heading="Base de connaissances"
-          content="Parcourez tous nos articles de base de connaissances."
-          isLinkVisible={true}
-          linkTitle="Visiter les guides et tutoriels"
-          linkURL="#"
-          isArrowVisible={true}
-          ><Icon name="question" />
-        </ContactIconBlock>
-
-        <ContactIconBlock
-          heading="FAQ"
-          content="Explorez notre FAQ pour des réponses rapides et claires aux questions courantes."
-          isLinkVisible={true}
-          linkTitle="Visiter la FAQ"
-          linkURL="#"
-          isArrowVisible={true}
-          ><Icon name="chatBubble" />
-        </ContactIconBlock>
-
-        <ContactIconBlock
-          heading="Visitez notre bureau"
-          content="ScrewFast UK"
+          heading="Visita nuestra oficina"
+          content="Ema"
           isAddressVisible={true}
-          addressContent="72 Union Terrace, E10 4PE London"
+          addressContent="Carrera 45No 48c - 08 (Soledad - Atlántico)"
           ><Icon name="mapPin" />
         </ContactIconBlock>
 
         <ContactIconBlock
-          heading="Contactez-nous par e-mail"
-          content="Préférez-vous le texte écrit ? Envoyez-nous un e-mail à"
+          heading="Contáctenos por correo electrónico"
+          content="¿Prefieres texto escrito? Envíanos un correo electrónico a"
           isLinkVisible={true}
-          linkTitle="support@screwfast.uk"
+          linkTitle="info.ema.sas@gmail.com"
           linkURL="#"
           ><Icon name="envelopeOpen" />
         </ContactIconBlock>

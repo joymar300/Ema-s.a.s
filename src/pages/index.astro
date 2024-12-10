@@ -10,14 +10,15 @@ import TestimonialsSection from "@components/sections/testimonials/TestimonialsS
 import PricingSection from "@components/sections/pricing/PricingSection.astro";
 import FAQ from "@components/sections/misc/FAQ.astro";
 import AnnouncementBanner from "@components/ui/banners/AnnouncementBanner.astro";
-import heroImage from "@images/hero-image.avif";
-import faqs from "@data/faqs.json";
-import features from "@data/features.json";
-import pricing from "@data/pricing.json";
+import Logo from "@images/Logo.avif";
+import faqs from "@data/fr/faqs.json";
+import features from "@data/fr/features.json";
+import pricing from "@data/fr/pricing.json";
 import featureImage from "@images/features-image.avif";
 import construction from "@images/construction-image.avif";
 import tools from "@images/automated-tools.avif";
 import dashboard from "@images/dashboard-image.avif";
+import { getRelativeLocaleUrl } from 'astro:i18n';
 
 const avatarSrcs: Array<string> = [
   "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
@@ -27,119 +28,73 @@ const avatarSrcs: Array<string> = [
 ];
 ---
 
-<MainLayout>
-  <AnnouncementBanner
-    btnId="dismiss-button"
-    btnTitle="Explore ScrewFast on GitHub"
-    url="https://github.com/mearashadowfax/ScrewFast"
-  />
+<MainLayout lang="es">
 
   <HeroSection
-    title=`Equip Your Projects with <span
-        class="text-yellow-500 dark:text-yellow-400">ScrewFast</span>`
-    subTitle="Top-quality hardware tools and expert construction services for every project need."
-    primaryBtn="Start Exploring"
-    primaryBtnURL="/products"
-    secondaryBtn="Contact Sales Team"
-    secondaryBtnURL="/contact"
-    withReview={true}
-    avatars={avatarSrcs}
-    rating=`<span class="font-bold">4.8</span> / 5`
-    starCount={4}
-    reviews=`From Over <span class="font-bold">12.8k</span> Reviews`
-    src={heroImage}
-    alt="Stack of ScrewFast product boxes containing assorted hardware tools"
-  />
-
-  <ClientsSection
-    title="Trusted by Industry Leaders"
-    subTitle="Experience the reliability chosen by industry giants."
+    title=`Bienvenidos a <span class="text-yellow-500 dark:text-yellow-400">EMA</span> <br> dónde diseñamos tus sueños`
+    subTitle="creemos que cada proyecto es una oportunidad para transformar ideas en espacios únicos que conecten con las personas y el entorno."
+    primaryBtn="Proyectos"
+    primaryBtnURL={getRelativeLocaleUrl("fr", "products")}
+    secondaryBtn="Contáctanos"
+    secondaryBtnURL={getRelativeLocaleUrl("fr", "contact")}
+    src={}
+    alt="Pile de boîtes de produits ScrewFast contenant des outils matériels assortis"
   />
 
   <FeaturesGeneral
-    title="Meeting Industry Demands"
-    subTitle="At ScrewFast, we tackle the unique challenges encountered in the hardware and construction sectors. From cutting-edge tools to expert services, we're dedicated to helping you overcome obstacles and achieve your goals."
+    title="¿Quiénes Somos?"
+    subTitle="EMA S.A.S. una empresa vanguardista en búsqueda constante de la innovación que nos permita responder ante las necesidades de nuestros clientes y sus sectores con la correcta aplicación de las nuevas tecnologías sin dejar de lado los procesos tradicionales. Nos dedicamos a la prestación de servicios de obra civil y arquitectura; optimizamos los espacios y brindamos soluciones personalizadas llave en mano que se adaptan a cualquier necesidad bajo diseños modernos y sofisticados. Contamos con personal capacitado, con valores y actitudes que nos generan un mayor grado de responsabilidad y calidad al proyectar y construir sueños."
     src={featureImage}
-    alt="ScrewFast products in floating boxes"
+    alt="Produits ScrewFast dans des boîtes flottantes"
     features={features}
   />
 
   <FeaturesNavs
-    title=`Customize <span class="text-yellow-500 dark:text-yellow-400">ScrewFast</span>'s offerings to perfectly suit your hardware and construction needs.`
+    title=`Nuestros Pilares`
     tabs={[
       {
-        heading: "Cutting-Edge Tools",
+        heading: "1.",
         content:
-          "Empower your projects with ScrewFast's cutting-edge tools. Experience enhanced efficiency in construction management with our sophisticated automated solutions.",
+          "Creemos en la excelencia. Nuestro modo de hacer es hacer las cosas lo mejor posible.",
         svg: "tools",
         src: tools,
-        alt: "Yellow and black heavy equipment on brown grass field",
+        alt: "Équipement lourd jaune et noir sur un champ d'herbe brune",
         first: true,
       },
       {
-        heading: "Intuitive Dashboards",
+        heading: "2.",
         content:
-          "Navigate with ease using ScrewFast's intuitive dashboards. Set up and oversee your projects seamlessly, with user-friendly interfaces designed for quick and effective workflow management.",
+          "Trabajamos por la construcción de la lealtad del cliente como eje de un crecimiento sostenible a corto y largo plazo.",
         svg: "dashboard",
         src: dashboard,
-        alt: "A screenshot or graphic representation of the intuitive dashboard",
+        alt: "Capture d'écran ou représentation graphique du tableau de bord intuitif",
         second: true,
       },
       {
-        heading: "Robust Features",
+        heading: "3.",
         content:
-          "Minimize complexity, maximize productivity. ScrewFast's robust features are engineered to streamline your construction process, delivering results that stand out for their excellence.",
+          "Creemos en el poder de las personas junto a un fuerte liderazgo mediante un entorno inclusivo donde se valoran las diferencias, como fuerza para superar dificultades.",
         svg: "house",
         src: construction,
-        alt: "Gray metal building frame near tower crane during daytime",
+        alt: "Structure métallique grise d'un bâtiment près d'une grue à tour pendant la journée",
       },
-    ]}
-  />
-
-  <TestimonialsSection
-    title="Fast-Track Your Projects"
-    subTitle="At ScrewFast, we ensure a swift start with instant account setup. Experience the speed of construction redefined."
-    ;
-    testimonials={[
       {
+        heading: "4.",
         content:
-          "ScrewFast dramatically boosted our project efficiency. Setup was instant, and their rapid response times are phenomenal. Truly a game-changer in hardware and construction support!",
-        author: "Samantha Ruiz",
-        role: "Chief Operating Officer | ConstructIt Inc.",
-        avatarSrc:
-          "https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?q=80&w=1453&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
-      },
-    ]}
-    statistics={[
-      {
-        count: "70k+",
-        description:
-          "customers equipped — from DIY to major construction firms",
+          "La innovación está presente en cada una de nuestras actuaciones.",
+        svg: "house",
+        src: construction,
+        alt: "Structure métallique grise d'un bâtiment près d'une grue à tour pendant la journée",
       },
       {
-        count: "35%",
-        description:
-          "uptick in project efficiency with ScrewFast tools and services",
-      },
-      {
-        count: "15.3%",
-        description:
-          "reduction in maintenance costs reported by long-term clients",
-      },
-      {
-        count: "2x",
-        description: "quicker assembly using innovative fastening solutions",
+        heading: "5.",
+        content:
+          "Nos apasiona resolver problemas que nadie ha resuelto antes.",
+        svg: "house",
+        src: construction,
+        alt: "Structure métallique grise d'un bâtiment près d'une grue à tour pendant la journée",
       },
     ]}
   />
-
-  <PricingSection pricing={pricing} />
-
-  <FAQ title="Frequently<br />asked questions" faqs={faqs} />
-
-  <HeroSectionAlt
-    title="Let's Build Together"
-    subTitle="ScrewFast is an open-source template, meticulously crafted with Astro, Tailwind CSS, and Preline UI frameworks."
-    url="https://github.com/mearashadowfax/ScrewFast"
-  />
+  
 </MainLayout>

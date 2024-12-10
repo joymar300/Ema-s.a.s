@@ -5,7 +5,6 @@ import MainSection from "@components/ui/blocks/MainSection.astro";
 import LeftSection from "@components/ui/blocks/LeftSection.astro";
 import RightSection from "@components/ui/blocks/RightSection.astro";
 import FeaturesStats from "@components/sections/features/FeaturesStats.astro";
-import { getRelativeLocaleUrl } from 'astro:i18n';
 
 // Import necessary images
 import blueprints from "@images/blueprints-image.avif";
@@ -16,6 +15,7 @@ import aerialView from "@images/aerial-view.avif";
 import usingTools from "@images/using-tools.avif";
 import progressBuilding from "@images/progress-building.avif";
 import underConstruction from "@images/under-construction.avif";
+import { SITE } from "@data/constants";
 
 interface Article {
   isRightSection: boolean;
@@ -36,68 +36,64 @@ interface Article {
 const articles: Article[] = [
   {
     isRightSection: true,
-    title: "Consultoría en arquitectura y diseño",
+    title: "Consulting in architecture and design",
     subTitle:
-      "Es necesario superar esa aproximación que reduce la Arquitectura a mero producto. Frente a una perspectiva de producto etiquetado para la posteridad, una mayor sensibilidad hacia el proceso, un enfoque intransitivo al que se incorpora la propia praxis humana en el devenir del proceso creativo. EMA S.A.S. trabaja sus servicios de consultoría, diseños, coordinación e integración siguiendo los procesos de su metodología de proyectos BIM (Building Information Modeling) o Modelos de información de la construcción. Esta metodología es aplicable a cualquier tipo de proyecto de la industria de la construcción (puentes, carreteras, edificaciones, e infraestructura en general) y se utiliza para todo el ciclo de vida de un proyecto de construcción, desde la conceptualización, diseños, construcción, administración, mantenimiento e incluso hasta su demolición.información de la construcción. Esta metodología es aplicable a cualquier tipo de proyecto de la industria de la construcción (puentes, carreteras, edificaciones, e infraestructura en general) y se utiliza para todo el ciclo de vida de un proyecto de construcción, desde la conceptualización, diseños, construcción, administración, mantenimiento e incluso hasta su demolición.",
+      "It is necessary to overcome this approach that reduces Architecture to a mere product. In contrast to a perspective of a product labelled for posterity, a greater sensitivity towards the process, an intransitive approach to which human praxis itself is incorporated in the development of the creative process. EMA S.A.S. works its consulting, design, coordination and integration services following the processes of its BIM (Building Information Modeling) project methodology. This methodology is applicable to any type of project in the construction industry (bridges, roads, buildings, and infrastructure in general) and is used for the entire life cycle of a construction project, from conceptualisation, designs, construction, administration, maintenance and even demolition.construction information. This methodology is applicable to any type of project in the construction industry (bridges, roads, buildings, and infrastructure in general) and is used for the entire life cycle of a construction project, from conceptualisation, designs, construction, administration, maintenance and even demolition.",
     single: false,
     imgOne: blueprints,
-    imgOneAlt: "Plans et tablette numérique avec des plans de construction.",
+    imgOneAlt: "Blueprints and digital tablet with construction plans.",
     imgTwo: personWorking,
-    imgTwoAlt: "Personne travaillant au bureau",
+    imgTwoAlt: "Person working in the office",
   },
   {
     isRightSection: false,
-    title: "Gestión Integrada de proyectos de obra civil o mobiliaria",
+    title: "Integrated management of civil or furniture works projects",
     subTitle:
-      "La creciente demanda de este tipo de servicios propició la creación de un área que concentra todas las especialidades, orientando constantemente el ciclo de vida de un proyecto hacia los objetivos definidos por el cliente, entre los que destacan el coste, el plazo y la calidad.",
+      "The growing demand for this type of service led to the creation of an area that concentrates all the specialties, constantly guiding the life cycle of a project towards the objectives defined by the client, among which cost, deadline and quality stand out.",
     img: beforeAfter,
-    imgAlt: "Chantier de construction avant et après",
-    btnExists: true,
-    btnTitle: "En savoir plus",
-    btnURL: "#",
+    imgAlt: "Construction site before and after",
   },
   {
     isRightSection: true,
-    title: "Consultoría, ejecución y mantenimiento de obras civiles",
+    title: "Consulting, execution and maintenance of civil works",
     subTitle:
-      "Consultoría técnica en todos los ámbitos que comprende la definición y construcción de una obra en cualquiera de sus fases, agrupados en torno a las disciplinas troncales de la edificación: sistemas constructivos, sistemas portantes, sistemas energéticos.",
+      "Technical consultancy in all areas that include the definition and construction of a project in any of its phases, grouped around the core disciplines of construction: construction systems, load-bearing systems, energy systems.",
     single: false,
     imgOne: constructionWorkers,
-    imgOneAlt: "Ouvriers du bâtiment orchestrant un projet",
+    imgOneAlt: "Construction workers orchestrating a project",
     imgTwo: aerialView,
-    imgTwoAlt: "Vue aérienne d'une construction gérée",
+    imgTwoAlt: "Aerial view of managed construction",
   },
   {
     isRightSection: false,
-    title: "Servicio técnico",
+    title: "Technical service",
     subTitle:
-      "Obtén ayuda por teléfono, chat o correo electrónico, o programa una reparación de equipos tecnológicos afines con el confort en inmuebles y obras civiles; sean estos equipos de climatización, energía eléctrica y sistemas hidráulicos.",
+      "Get help by phone, chat or email, or schedule a repair of technological equipment related to comfort in buildings and civil works; be it air conditioning equipment, electrical energy or hydraulic systems.",
     img: usingTools,
     imgAlt:
-      "Homme en gilet orange et noir portant un casque blanc tenant un outil électrique jaune et noir",
+      "Man in orange and black vest wearing white helmet holding yellow and black power tool",
   },
 ];
+
+const pageTitle: string = `Services | ${SITE.title}`;
 ---
 
 <MainLayout
-  title="Services | ScrewFast"
-  lang="fr"
+  title={pageTitle}
   structuredData={{
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://screwfast.uk/fr/services",
-    url: "https://screwfast.uk/fr/services",
-    name: "Services de Consultation d'Experts | ScrewFast",
-    description:
-      "Unissant l'expertise à votre vision, ScrewFast fournit un service exceptionnel et des solutions complètes dans le secteur du matériel et de la construction, de la consultation à l'achèvement du projet.",
-    isPartOf: {
-      "@type": "WebSite",
-      url: "https://screwfast.uk/fr",
-      name: "ScrewFast",
-      description:
-        "ScrewFast propose des outils matériels de premier ordre et des services de construction experts pour répondre à tous vos besoins de projet.",
+    "@id": "https://screwfast.uk/services",
+    "url": "https://screwfast.uk/services",
+    "name": "Expert Consultation Services | ScrewFast",
+    "description": "Uniting expertise with your vision, ScrewFast provides exceptional service and comprehensive solutions in the hardware and construction industry, from consultation to project completion.",
+    "isPartOf": {
+        "@type": "WebSite",
+        "url": "https://screwfast.uk",
+        "name": "ScrewFast",
+        "description": "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs."
     },
-    inLanguage: "fr",
+    "inLanguage": "en-US"
   }}
 >
   <!--MainSection is the introductory section of the page, it also contains a CTA button-->
@@ -112,7 +108,7 @@ const articles: Article[] = [
   If 'single' is true, it displays one image, otherwise it displays two.
   -->
   {
-    articles.map((article) => {
+    articles.map(article => {
       return article.isRightSection ? (
         <RightSection
           title={article.title}
@@ -140,5 +136,4 @@ const articles: Article[] = [
     })
   }
   <!--FeaturesStats section showcases essential stats valuable to users-->
-
-</div>
+    </div>

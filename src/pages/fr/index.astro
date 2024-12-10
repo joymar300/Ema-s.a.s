@@ -10,15 +10,14 @@ import TestimonialsSection from "@components/sections/testimonials/TestimonialsS
 import PricingSection from "@components/sections/pricing/PricingSection.astro";
 import FAQ from "@components/sections/misc/FAQ.astro";
 import AnnouncementBanner from "@components/ui/banners/AnnouncementBanner.astro";
-import Logo from "@images/Logo.avif";
-import faqs from "@data/fr/faqs.json";
-import features from "@data/fr/features.json";
-import pricing from "@data/fr/pricing.json";
+import heroImage from "@images/hero-image.avif";
+import faqs from "@data/faqs.json";
+import features from "@data/features.json";
+import pricing from "@data/pricing.json";
 import featureImage from "@images/features-image.avif";
 import construction from "@images/construction-image.avif";
 import tools from "@images/automated-tools.avif";
 import dashboard from "@images/dashboard-image.avif";
-import { getRelativeLocaleUrl } from 'astro:i18n';
 
 const avatarSrcs: Array<string> = [
   "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
@@ -28,73 +27,74 @@ const avatarSrcs: Array<string> = [
 ];
 ---
 
-<MainLayout lang="fr">
+<MainLayout lang="en">
 
   <HeroSection
-    title=`Bienvenidos a <span class="text-yellow-500 dark:text-yellow-400">EMA</span>`
-    subTitle="hacemos más que diseñar; creamos lugares que cuentan historias."
-    primaryBtn="Proyectos"
-    primaryBtnURL={getRelativeLocaleUrl("fr", "products")}
-    secondaryBtn="Contactanos"
-    secondaryBtnURL={getRelativeLocaleUrl("fr", "contact")}
+    title=`Welcome to <span
+        class="text-yellow-500 dark:text-yellow-400">EMA</span> <br> where we design your dreams`
+    subTitle="We believe that each project is an opportunity to transform ideas into unique spaces that connect with people and the environment."
+    primaryBtn="Proyects"
+    primaryBtnURL="/products"
+    secondaryBtn="Contact us"
+    secondaryBtnURL="/contact"
     src={}
-    alt="Pile de boîtes de produits ScrewFast contenant des outils matériels assortis"
+    alt="Stack of ScrewFast product boxes containing assorted hardware tools"
   />
 
   <FeaturesGeneral
-    title="¿Quiénes Somos?"
-    subTitle="EMA S.A.S. una empresa vanguardista en búsqueda constante de la innovación que nos permita responder ante las necesidades de nuestros clientes y sus sectores con la correcta aplicación de las nuevas tecnologías sin dejar de lado los procesos tradicionales. Nos dedicamos a la prestación de servicios de obra civil y arquitectura; optimizamos los espacios y brindamos soluciones personalizadas llave en mano que se adaptan a cualquier necesidad bajo diseños modernos y sofisticados. Contamos con personal capacitado, con valores y actitudes que nos generan un mayor grado de responsabilidad y calidad al proyectar y construir sueños."
+    title="Who are we?"
+    subTitle="EMA S.A.S. is a cutting-edge company in constant search of innovation that allows us to respond to the needs of our clients and their sectors with the correct application of new technologies without leaving aside traditional processes. We are dedicated to providing civil engineering and architectural services; we optimize spaces and provide customized turnkey solutions that adapt to any need under modern and attractive designs. We have trained personnel, with values ​​and attitudes that generate a greater degree of responsibility and quality when designing and building dreams."
     src={featureImage}
-    alt="Produits ScrewFast dans des boîtes flottantes"
+    alt="ScrewFast products in floating boxes"
     features={features}
   />
 
   <FeaturesNavs
-    title=`Nuestros Pilares`
+    title=`Customize <span class="text-yellow-500 dark:text-yellow-400">ScrewFast</span>'s offerings to perfectly suit your hardware and construction needs.`
     tabs={[
       {
         heading: "1.",
         content:
-          "Creemos en la excelencia. Nuestro modo de hacer es hacer las cosas lo mejor posible.",
+          "We believe in excellence. Our way of doing things is to do things as well as possible.",
         svg: "tools",
         src: tools,
-        alt: "Équipement lourd jaune et noir sur un champ d'herbe brune",
+        alt: "Yellow and black heavy equipment on brown grass field",
         first: true,
       },
       {
         heading: "2.",
         content:
-          "Trabajamos por la construcción de la lealtad del cliente como eje de un crecimiento sostenible a corto y largo plazo.",
+          "We work to build customer loyalty as the axis of sustainable growth in the short and long term.",
         svg: "dashboard",
         src: dashboard,
-        alt: "Capture d'écran ou représentation graphique du tableau de bord intuitif",
+        alt: "A screenshot or graphic representation of the intuitive dashboard",
         second: true,
       },
       {
         heading: "3.",
         content:
-          "Creemos en el poder de las personas junto a un fuerte liderazgo mediante un entorno inclusivo donde se valoran las diferencias, como fuerza para superar dificultades.",
+          "We believe in the power of people, together with strong leadership, through an inclusive environment where differences are valued as a force to overcome difficulties.",
         svg: "house",
         src: construction,
-        alt: "Structure métallique grise d'un bâtiment près d'une grue à tour pendant la journée",
+        alt: "Gray metal building frame near tower crane during daytime",
       },
       {
         heading: "4.",
         content:
-          "La innovación está presente en cada una de nuestras actuaciones.",
+          "Innovation is present in each of our actions.",
         svg: "house",
         src: construction,
-        alt: "Structure métallique grise d'un bâtiment près d'une grue à tour pendant la journée",
+        alt: "Gray metal building frame near tower crane during daytime",
       },
       {
         heading: "5.",
         content:
-          "Nos apasiona resolver problemas que nadie ha resuelto antes.",
+          "We are passionate about solving problems that no one has solved before.",
         svg: "house",
         src: construction,
-        alt: "Structure métallique grise d'un bâtiment près d'une grue à tour pendant la journée",
+        alt: "Gray metal building frame near tower crane during daytime",
       },
     ]}
   />
-  
+
 </MainLayout>

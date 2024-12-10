@@ -13,16 +13,17 @@ declare global {
     gsap: any;
   }
 }
+
 // This gets the static paths for all the unique products
 
 export async function getStaticPaths() {
   const productEntries = await getCollection("products", ({ id }) =>
-    id.startsWith("fr/")
+    id.startsWith("en/")
   );
   return productEntries.map((product) => {
-    const slugWithoutLang = product.slug.replace(/^fr\//, ""); // Remove the "fr/" prefix
+    const slugWithoutLang = product.slug.replace(/^en\//, ""); // Remove the "en/" prefix
     return {
-      params: { lang: "fr", slug: slugWithoutLang },
+      params: { slug: slugWithoutLang },
       props: { product },
     };
   });
@@ -45,7 +46,7 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
         id="fadeText"
         class="mb-8 max-w-prose text-pretty font-light text-neutral-700 dark:text-neutral-300 sm:text-xl"
       >
-        <!-- {product.data.main.content} -->
+        {product.data.main.content}
       </p>
     </div>
     <div
@@ -53,7 +54,7 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
     >
       <div id="fadeInUp">
         <h1
-          class="block text-4xl font-bold tracking-tighter text-neutral-800 dark:text-neutral-200 sm:text-5xl md:text-6xl lg:text-4xl"
+          class="block text-4xl font-bold tracking-tighter text-neutral-800 dark:text-neutral-200 sm:text-5xl md:text-6xl lg:text-7xl"
         >
           {product.data.title}
         </h1>
@@ -108,10 +109,10 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
                 {product.data.longDescription.subTitle}
               </p>
               <p class="mt-5">
-                <!-- <PrimaryCTA
+                <PrimaryCTA
                   title={product.data.longDescription.btnTitle}
                   url={product.data.longDescription.btnURL}
-                /> -->
+                />
               </p>
             </div>
 
