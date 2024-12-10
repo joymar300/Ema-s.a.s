@@ -32,7 +32,7 @@ const testimonials = [
   // First testimonial data
   {
     content:
-      "El diseño demuestra una creatividad excepcional al combinar elementos tradicionales con soluciones modernas e innovadoras.Lograron un equilibrio perfecto entre funcionalidad y estética, creando espacios que no solo son hermosos, sino también altamente prácticos",
+      " \"Since switching to ScrewFast's hardware tools, the efficiency on our construction sites has skyrocketed. The durability of the hex bolts and precision of the machine screws are simply unmatched. It's refreshing to work with a company that truly understands the daily demands of the industry.\" ",
     author: "Jason Clark",
     role: "Site Foreman | TopBuild",
     avatarSrc:
@@ -42,7 +42,7 @@ const testimonials = [
   // Second testimonial data
   {
     content:
-      "La atención al detalle en cada rincón del diseño es admirable, desde los materiales seleccionados hasta las líneas arquitectónicas impecables.La integración de principios sostenibles en el diseño refleja un compromiso admirable con el medio ambiente y el futuro.",
+      " \"As an interior designer, I'm always looking for high-quality materials and tools that help bring my visions to life. ScrewFast's mixed screws assortment has been a game-changer for my projects, providing the perfect blend of quality and variety. The outstanding customer support was just the cherry on top!\" ",
     author: "Maria Gonzalez",
     role: "Interior Designer | Creative Spaces",
     avatarSrc:
@@ -52,7 +52,7 @@ const testimonials = [
   // Third testimonial data
   {
     content:
-      "El proyecto se integra armónicamente con su entorno, respetando el paisaje natural y potenciando la conexión con el espacio.Han logrado un diseño centrado en la experiencia del usuario, ofreciendo comodidad, accesibilidad y fluidez en cada espacio.",
+      " \"I’ve been a professional carpenter for over 15 years, and I can sincerely say that ScrewFast’s tap bolts and nuts are some of the best I've used. They grip like no other, and I have full confidence in every joint and fixture. Plus, the service is impeccable – they truly care about my project's success.\" ",
     author: "Richard Kim",
     role: "Master Carpenter | WoodWright",
     avatarSrc:
@@ -100,11 +100,7 @@ const pageTitle: string = `Products | ${SITE.title}`;
           )
         }
       </div>
-      <PrimaryCTA
-        title="ver comentarios"
-        url="#testimonials"
-        noArrow={true}
-      />
+      <PrimaryCTA title="Customer Stories" url="#testimonials" noArrow={true} />
     </div>
     <!--Displaying products in alternating styles. Alternative product gets different card styling.-->
     <!--Maps through all product entries and displays them with either CardSmall or CardWide based on their position.-->
@@ -122,7 +118,7 @@ const pageTitle: string = `Products | ${SITE.title}`;
     </section>
   </div>
   <!--Features statistics section-->
-  <FeaturesStatsAlt
+  <!-- <FeaturesStatsAlt
     title="Why Choose ScrewFast?"
     subTitle="Transform your ideas into tangible results with ScrewFast tools. Whether you're starting with a sketch on a napkin or diving into a comprehensive construction project, our tools are engineered to help you build with confidence."
     benefits={[
@@ -130,10 +126,10 @@ const pageTitle: string = `Products | ${SITE.title}`;
       "Innovative solutions tailored to modern construction needs.",
       "Customer support dedicated to your project's success.",
     ]}
-  />
+  /> -->
   <!--Testimonials section-->
   <TestimonialsSectionAlt
-    title="Comentarios de nuestros clientes"
+    title="What Our Customers Say"
     testimonials={testimonials}
   />
 </MainLayout>
